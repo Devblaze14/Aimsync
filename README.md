@@ -68,18 +68,6 @@ Required env vars:
 3. Copy each UUID into `supabase/seed.sql` (uncomment the user `INSERT`).
 4. Run `supabase/seed.sql` in the SQL Editor.
 
-## Features
-
-- ✅ Phase 1: Project setup, Tailwind, Inter, brand colors
-- ✅ Phase 2: Folder structure, atom logo
-- ✅ Phase 3: schema, seed, UoM engine, cycle clock, AI coach
-- ✅ Phase 4: Supabase SSR clients, auth guards, middleware, login, role layouts
-- ✅ Phase 5: Employee goal sheet, **WeightageBar**, **AI Coach button**, goal form
-- ✅ Phase 6: Manager approvals (inline-edit, approve all, return for rework), team dashboard, per-employee check-in
-- ✅ Phase 7: Employee quarterly check-in with live score preview
-- ✅ Phase 8: Admin cycles + **Time-Travel panel**, users directory, **vertical audit timeline**
-- ✅ Phase 9: Completion dashboard (Recharts bar chart) + CSV export
-- ✅ Phase 10: Landing, demo launcher, error boundary, notifications bell, architecture SVG
 
 ## Architecture
 
