@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .title { font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-size: 12px; fill: #64748b; }
+      .grp-label { font-size: 13px; font-weight: 700; fill: #334155; }
+      .box-title { font-size: 14px; font-weight: 600; fill: #0f172a; }
+      .box-sub { font-size: 11px; fill: #475569; }
+      .edge-label { font-size: 10px; fill: #64748b; }
+      .grp-client { fill: #f1f5f9; stroke: #94a3b8; }
+      .grp-edge { fill: #fef3c7; stroke: #f59e0b; }
+      .grp-app { fill: #ecfeff; stroke: #06b6d4; }
+      .grp-supa { fill: #dcfce7; stroke: #16a34a; }
+      .grp-ext { fill: #fce7f3; stroke: #db2777; }
+      .node { fill: #ffffff; stroke: #475569; stroke-width: 1.5; rx: 8; }
+      .db { fill: #ffffff; stroke: #16a34a; stroke-width: 2; rx: 8; }
+      .edge { stroke: #475569; stroke-width: 1.5; fill: none; }
+      .edge-dash { stroke-dasharray: 5 4; }
+    </style>
+  </defs>
+
+  <text x="40" y="40" class="title">Aimsync — Goal Setting &amp; Tracking Portal · Architecture</text>
+  <text x="40" y="60" class="subtitle">Next.js 14 (App Router) · Supabase Postgres + Auth · Vercel · Anthropic Claude</text>
+
+  <!-- CLIENT -->
+  <rect x="40" y="90" width="1120" height="100" rx="10" class="grp-client" opacity="0.6"/>
+  <text x="60" y="112" class="grp-label">Browser — Employee · Manager · Admin</text>
+  <rect x="430" y="125" width="340" height="55" class="node"/>
+  <text x="600" y="146" text-anchor="middle" class="box-title">Next.js 14 App Router UI</text>
+  <text x="600" y="164" text-anchor="middle" class="box-sub">Tailwind · Radix UI · Recharts · Sonner toasts</text>
+
+  <!-- EDGE -->
+  <rect x="40" y="210" width="1120" height="80" rx="10" class="grp-edge" opacity="0.5"/>
+  <text x="60" y="232" class="grp-label">Vercel Edge</text>
+  <rect x="430" y="240" width="340" height="40" class="node"/>
+  <text x="600" y="265" text-anchor="middle" class="box-title">middleware.ts — session refresh · route protection</text>
+
+  <!-- APP -->
+  <rect x="40" y="310" width="730" height="200" rx="10" class="grp-app" opacity="0.4"/>
+  <text x="60" y="332" class="grp-label">Vercel — Next.js Runtime</text>
+
+  <rect x="65" y="345" width="220" height="150" class="node"/>
+  <text x="175" y="368" text-anchor="middle" class="box-title">Server Components</text>
+  <text x="175" y="386" text-anchor="middle" class="box-sub">page.tsx · layout.tsx</text>
+  <text x="175" y="402" text-anchor="middle" class="box-sub">requireRole() guards</text>
+  <text x="175" y="425" text-anchor="middle" class="box-sub">• employee/goals · checkin</text>
+  <text x="175" y="441" text-anchor="middle" class="box-sub">• manager/approvals · team</text>
+  <text x="175" y="457" text-anchor="middle" class="box-sub">• admin/cycles · users · audit</text>
+  <text x="175" y="473" text-anchor="middle" class="box-sub">• admin/shared-goals · reports</text>
+
+  <rect x="300" y="345" width="220" height="150" class="node"/>
+  <text x="410" y="368" text-anchor="middle" class="box-title">Route Handlers (API)</text>
+  <text x="410" y="395" text-anchor="middle" class="box-sub">POST /api/shared-goals</text>
+  <text x="410" y="412" text-anchor="middle" class="box-sub">GET /api/export (CSV)</text>
+  <text x="410" y="429" text-anchor="middle" class="box-sub">POST /api/ai-coach</text>
+  <text x="410" y="446" text-anchor="middle" class="box-sub">POST /api/time-travel</text>
+
+  <rect x="535" y="345" width="220" height="150" class="node"/>
+  <text x="645" y="368" text-anchor="middle" class="box-title">lib/ — Pure Logic</text>
+  <text x="645" y="395" text-anchor="middle" class="box-sub">uom-engine.ts</text>
+  <text x="645" y="411" text-anchor="middle" class="box-sub">  Min · Max · Timeline · Zero</text>
+  <text x="645" y="430" text-anchor="middle" class="box-sub">cycle-clock.ts (phases)</text>
+  <text x="645" y="447" text-anchor="middle" class="box-sub">audit.ts</text>
+  <text x="645" y="463" text-anchor="middle" class="box-sub">auth-guard.ts</text>
+
+  <!-- SUPABASE -->
+  <rect x="790" y="310" width="370" height="430" rx="10" class="grp-supa" opacity="0.35"/>
+  <text x="810" y="332" class="grp-label">Supabase</text>
+
+  <rect x="810" y="345" width="330" height="50" class="node"/>
+  <text x="975" y="367" text-anchor="middle" class="box-title">Auth — Email/Password · JWT</text>
+  <text x="975" y="383" text-anchor="middle" class="box-sub">@supabase/ssr cookie session</text>
+
+  <rect x="810" y="410" width="330" height="180" class="db"/>
+  <text x="975" y="432" text-anchor="middle" class="box-title">Postgres</text>
+  <text x="975" y="455" text-anchor="middle" class="box-sub">users · cycles · thrust_areas</text>
+  <text x="975" y="472" text-anchor="middle" class="box-sub">goals (source_goal_id → shared)</text>
+  <text x="975" y="489" text-anchor="middle" class="box-sub">achievements · checkins</text>
+  <text x="975" y="506" text-anchor="middle" class="box-sub">audit_log · notifications</text>
+  <text x="975" y="535" text-anchor="middle" class="box-sub" font-weight="600">Indexes:</text>
+  <text x="975" y="551" text-anchor="middle" class="box-sub">idx_goals_employee_cycle</text>
+  <text x="975" y="567" text-anchor="middle" class="box-sub">idx_goals_source · idx_audit_*</text>
+
+  <rect x="810" y="605" width="155" height="125" class="node"/>
+  <text x="887" y="628" text-anchor="middle" class="box-title">RLS Policies</text>
+  <text x="887" y="652" text-anchor="middle" class="box-sub">employee_own</text>
+  <text x="887" y="668" text-anchor="middle" class="box-sub">manager_team</text>
+  <text x="887" y="684" text-anchor="middle" class="box-sub">admin_all</text>
+  <text x="887" y="710" text-anchor="middle" class="box-sub">current_user_role()</text>
+
+  <rect x="985" y="605" width="155" height="125" class="node"/>
+  <text x="1062" y="628" text-anchor="middle" class="box-title">DB Triggers</text>
+  <text x="1062" y="652" text-anchor="middle" class="box-sub">trg_audit_goals</text>
+  <text x="1062" y="668" text-anchor="middle" class="box-sub">→ audit_log on lock</text>
+  <text x="1062" y="690" text-anchor="middle" class="box-sub">trg_sync_shared</text>
+  <text x="1062" y="706" text-anchor="middle" class="box-sub">→ propagate achievements</text>
+  <text x="1062" y="722" text-anchor="middle" class="box-sub">  to linked copies</text>
+
+  <!-- EXTERNAL -->
+  <rect x="40" y="540" width="730" height="100" rx="10" class="grp-ext" opacity="0.35"/>
+  <text x="60" y="562" class="grp-label">External</text>
+  <rect x="300" y="575" width="220" height="55" class="node"/>
+  <text x="410" y="597" text-anchor="middle" class="box-title">Anthropic Claude API</text>
+  <text x="410" y="615" text-anchor="middle" class="box-sub">AI Goal Coach (server-side only)</text>
+
+  <!-- EDGES -->
+  <path d="M 600 180 L 600 240" class="edge" marker-end="url(#arrow)"/>
+  <text x="610" y="215" class="edge-label">HTTPS</text>
+
+  <path d="M 600 280 L 600 345" class="edge" marker-end="url(#arrow)"/>
+  <text x="610" y="315" class="edge-label">RSC render</text>
+
+  <path d="M 770 145 C 900 145, 975 250, 975 345" class="edge edge-dash" marker-end="url(#arrow)"/>
+  <text x="900" y="200" class="edge-label">browser fetch → API</text>
+
+  <path d="M 285 420 L 300 420" class="edge" marker-end="url(#arrow)"/>
+  <path d="M 520 420 L 535 420" class="edge" marker-end="url(#arrow)"/>
+
+  <path d="M 290 480 C 400 540, 700 480, 810 460" class="edge" marker-end="url(#arrow)"/>
+  <text x="500" y="525" class="edge-label">anon key · RLS enforced</text>
+
+  <path d="M 520 460 C 650 470, 750 460, 810 500" class="edge" marker-end="url(#arrow)"/>
+  <text x="650" y="495" class="edge-label">service role (bypass RLS)</text>
+
+  <path d="M 410 495 L 410 575" class="edge" marker-end="url(#arrow)"/>
+  <text x="420" y="540" class="edge-label">prompts</text>
+
+  <!-- FOOTER -->
+  <rect x="40" y="760" width="1120" height="40" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="60" y="785" class="box-sub">
+    Cost wins:  RLS replaces a middle API tier  ·  RSC keeps client bundle small  ·  DB triggers handle audit + shared-goal sync server-side  ·  /api/export is 3 queries, not N+1
+  </text>
+</svg>
