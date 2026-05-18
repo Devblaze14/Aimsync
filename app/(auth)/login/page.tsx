@@ -36,14 +36,14 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-page p-4">
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-6">
           <Link href="/"><Logo className="scale-125" /></Link>
         </div>
-        <Card>
+        <Card className="bg-background">
           <CardHeader>
-            <CardTitle>Sign in to AtomQuest</CardTitle>
+            <CardTitle>Sign in to AimSync</CardTitle>
             <CardDescription>Use your work email to access the goal portal.</CardDescription>
           </CardHeader>
           <CardContent>

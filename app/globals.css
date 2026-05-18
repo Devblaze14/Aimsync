@@ -4,30 +4,65 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    /* Page = warm grey behind floating shell */
+    --page: 220 14% 92%;
+    /* Shell = soft off-white card */
+    --background: 40 18% 96%;
+    --foreground: 220 30% 10%;
+    /* Inner surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 30% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 220 56% 15%;
+    --popover-foreground: 220 30% 10%;
+    /* Cream highlight (the dashboard hero card in the ref) */
+    --cream: 45 35% 94%;
+    /* Primary = near-black for CTAs */
+    --primary: 220 30% 10%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 217 91% 60%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 30% 10%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 30% 10%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 346 87% 51%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
-    --radius: 0.5rem;
+    /* Pastel chip palette */
+    --chip-peach: 22 90% 90%;
+    --chip-peach-fg: 22 70% 35%;
+    --chip-mint: 150 50% 88%;
+    --chip-mint-fg: 150 45% 28%;
+    --chip-sky: 210 70% 90%;
+    --chip-sky-fg: 220 70% 35%;
+    --chip-lilac: 270 50% 92%;
+    --chip-lilac-fg: 270 40% 38%;
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 220 30% 10%;
+    --radius: 1rem;
   }
 }
 
 @layer base {
   * { @apply border-border; }
-  body { @apply bg-background text-foreground font-sans; }
+  html, body { @apply h-full; }
+  body {
+    @apply text-foreground font-sans antialiased;
+    background-color: hsl(var(--page));
+  }
+}
+
+@layer components {
+  /* Floating shell — used by all authenticated layouts. */
+  .app-shell {
+    @apply rounded-[28px] bg-background shadow-[0_8px_40px_-12px_rgba(15,23,42,0.18)] overflow-hidden;
+  }
+  /* Sidebar pill — used for nav links */
+  .nav-pill {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-full text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-white/60 transition-colors;
+  }
+  .nav-pill[data-active="true"] {
+    @apply bg-white text-foreground shadow-sm;
+  }
+  .surface-cream { background-color: hsl(var(--cream)); }
 }

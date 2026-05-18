@@ -1,4 +1,4 @@
-# AtomQuest — Goal Setting & Tracking Portal
+# AimSync — Goal Setting & Tracking Portal
 
 End-to-end annual goal lifecycle: creation → manager approval → quarterly check-ins → reporting → audit. Built for the AtomQuest Hackathon 1.0.
 
@@ -76,3 +76,4 @@ Required env vars:
 ---
 
 Built with care for the AtomQuest Hackathon 1.0.
+

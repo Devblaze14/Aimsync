@@ -6,7 +6,7 @@ import { Toaster } from 'sonner';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'AtomQuest — Goal Setting & Tracking Portal',
+  title: 'AimSync — Goal Setting & Tracking Portal',
   description: 'Annual goal lifecycle: creation → approval → quarterly check-ins → reporting → audit.',
 };
 

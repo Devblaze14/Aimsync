@@ -61,7 +61,7 @@ export async function GET(req: NextRequest) {
   return new NextResponse(csv, {
     headers: {
       'Content-Type': 'text/csv; charset=utf-8',
-      'Content-Disposition': `attachment; filename="atomquest-achievement-${cycle.name.replace(/\s+/g, '-')}.csv"`,
+      'Content-Disposition': `attachment; filename="aimsync-achievement-${cycle.name.replace(/\s+/g, '-')}.csv"`,
     },
   });
 }

@@ -22,7 +22,7 @@
     </style>
   </defs>
 
-  <text x="40" y="40" class="title">Aimsync — Goal Setting &amp; Tracking Portal · Architecture</text>
+  <text x="40" y="40" class="title">AimSync — Goal Setting &amp; Tracking Portal · Architecture</text>
   <text x="40" y="60" class="subtitle">Next.js 14 (App Router) · Supabase Postgres + Auth · Vercel · Anthropic Claude</text>
 
   <!-- CLIENT -->

@@ -37,17 +37,18 @@ export default function DemoPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-6">
-      <header className="container flex items-center justify-between mb-8">
+    <div className="min-h-screen bg-page p-3 md:p-5">
+      <div className="app-shell mx-auto max-w-[1400px] min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] px-6 md:px-12 py-8">
+      <header className="flex items-center justify-between mb-10">
         <Link href="/"><Logo /></Link>
         <Link href="/login"><Button variant="outline" size="sm">Manual sign-in</Button></Link>
       </header>
-      <main className="container max-w-5xl">
-        <h1 className="text-3xl font-bold">Demo Launcher</h1>
-        <p className="text-muted-foreground mb-8">Pick a seed user to sign in instantly. All share password <code className="bg-muted px-1 rounded">Atom@123</code>.</p>
+      <main className="max-w-5xl">
+        <h1 className="text-4xl font-bold tracking-tight">Demo Launcher</h1>
+        <p className="text-muted-foreground mt-2 mb-10">Pick a seed user to sign in instantly. All share password <code className="bg-muted px-2 py-0.5 rounded-md font-mono text-xs">Atom@123</code>.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {USERS.map((u) => (
-            <Card key={u.email} className="hover:shadow-md transition-shadow">
+            <Card key={u.email} className="surface-cream border-0 hover:shadow-md transition-shadow">
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-base">{u.name}</CardTitle>
@@ -64,6 +65,7 @@ export default function DemoPage() {
           ))}
         </div>
       </main>
+      </div>
     </div>
   );
 }

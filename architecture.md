@@ -1,4 +1,4 @@
-# Aimsync — Architecture Diagram
+# AimSync — Architecture Diagram
 
 > Atomberg AtomQuest Hackathon 1.0 — In-House Goal Setting & Tracking Portal
 
